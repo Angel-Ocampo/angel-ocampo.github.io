@@ -1,0 +1,55 @@
+<h1>Angélica María Ocampo</h1>
+<h2>Soy estudiante de programación</h2>
+<p>Soy de Colombia y vivo en Cali, abogada de profesión, estudiante de psicología</p>
+<h2>Semana 1</h2>
+<p><em>Configuración del ambiente de desarrollo (Prework)</em></p>
+<ul>
+<li>Instalando Ubuntu en Windows 10/11</li>
+<li>Instalación de Git</li>
+<li>Configuración de las llaves SSH</li>
+<li>Creando una cuenta de GitHub</li>
+<li>Instalación de Node.js y Yarn</li>
+<li>Primeros pasos con VS Code</li>
+</ul>
+<h2>Uso básico de la Terminal</h2>
+<p>Conociendo la terminal</p>
+<p>Comandos alias para la terminal</p>
+<p>El mundo del Markdown</p>
+<p>Sintaxis básica de Markdown</p>
+<p>Sintaxis saborizada en GitHub</p>
+<ul>
+<li>Import</li>
+</ul>
+<h4>Building for source</h4>
+<p>For production release:</p>
+<pre><code class="language-sh">gulp build --prod
+</code></pre>
+<p>Generating pre-built zip archives for distribution:</p>
+<pre><code class="language-sh">gulp build dist --prod
+</code></pre>
+<h2>Docker</h2>
+<p>Dillinger is very easy to install and deploy in a Docker container.</p>
+<p>By default, the Docker will expose port 8080, so change this within the
+Dockerfile if necessary. When ready, simply use the Dockerfile to
+build the image.</p>
+<pre><code class="language-sh">cd dillinger
+docker build -t &lt;youruser&gt;/dillinger:${package.json.version} .
+</code></pre>
+<p>This will create the dillinger image and pull in the necessary dependencies.
+Be sure to swap out <code>${package.json.version}</code> with the actual
+version of Dillinger.</p>
+<p>Once done, run the Docker image and map the port to whatever you wish on
+your host. In this example, we simply map port 8000 of the host to
+port 8080 of the Docker (or whatever port was exposed in the Dockerfile):</p>
+<pre><code class="language-sh">docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger &lt;youruser&gt;/dillinger:${package.json.version}
+</code></pre>
+<blockquote>
+<p>Note: <code>--capt-add=SYS-ADMIN</code> is required for PDF rendering.</p>
+</blockquote>
+<p>Verify the deployment by navigating to your server address in
+your preferred browser.</p>
+<pre><code class="language-sh">127.0.0.1:8000
+</code></pre>
+<h2>License</h2>
+<p>MIT</p>
+<p><strong>Free Software, Hell Yeah!</strong></p>
